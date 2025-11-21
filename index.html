@@ -8,509 +8,46 @@
     name="description"
     content="TASK L3C is a public-benefit organization that strengthens disaster readiness in Japan by connecting international supporters with trusted Japanese NGOs and NPOs before the next major event."
   />
-
-  <style>
-    /* =========================
-       THEME VARIABLES
-       ========================= */
-    :root {
-      --bg-page: #0f172a;          /* page background */
-      --bg-surface: #ffffff;
-      --bg-muted: #f3f4f6;
-
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --text-on-dark: #e5e7eb;
-
-      --accent: #2563eb;           /* primary accent */
-      --accent-soft: #dbeafe;
-      --border-subtle: #e5e7eb;
-
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
-      --radius-lg: 16px;
-      --radius-pill: 999px;
-    }
-
-    /* =========================
-       GLOBAL RESET / BASE
-       ========================= */
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at top, #1f2937, #020617);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    main {
-      padding-bottom: 4rem;
-    }
-
-    .page-shell {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 0 1.5rem 2rem;
-    }
-
-    .card-surface {
-      background: var(--bg-surface);
-      border-radius: 24px;
-      box-shadow: var(--shadow-soft);
-      padding: 1.5rem 1.5rem 2.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .section {
-      padding: 3rem 0;
-      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
-    }
-
-    .section:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .section-header {
-      margin-bottom: 1.25rem;
-    }
-
-    .eyebrow {
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0.3rem 0;
-      line-height: 1.2;
-      color: var(--text-main);
-    }
-
-    h1 {
-      font-size: clamp(2.1rem, 2.7vw, 2.6rem);
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: clamp(1.4rem, 2vw, 1.7rem);
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-    }
-
-    p {
-      margin: 0 0 0.75rem;
-      font-size: 0.98rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-      max-width: 68ch;
-    }
-
-    ul {
-      margin: 0.25rem 0 0.75rem 1.3rem;
-      padding: 0;
-      color: var(--text-muted);
-    }
-
-    li {
-      margin-bottom: 0.4rem;
-    }
-
-    .stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 1.75rem;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 720px) {
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* =========================
-       NAV / HEADER
-       ========================= */
-    .site-header-shell {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.92),
-        rgba(15, 23, 42, 0.75),
-        transparent
-      );
-    }
-
-    .site-header {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 0.75rem 1.5rem 0.35rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .logo {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
-
-    .logo-main {
-      font-weight: 700;
-      font-size: 1.02rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #e5e7eb;
-    }
-
-    .logo-sub {
-      font-size: 0.75rem;
-      color: #9ca3af;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.86rem;
-    }
-
-    .nav-links a {
-      color: #e5e7eb;
-      text-decoration: none;
-      padding: 0.3rem 0;
-      border-bottom: 2px solid transparent;
-    }
-
-    .nav-links a:hover {
-      border-bottom-color: rgba(59, 130, 246, 0.85);
-    }
-
-    .nav-cta {
-      padding: 0.35rem 0.9rem;
-      border-radius: var(--radius-pill);
-      background: #f97316;
-      color: #111827 !important;
-      font-weight: 600;
-      border: none;
-    }
-
-    .nav-cta:hover {
-      filter: brightness(1.05);
-      text-decoration: none;
-    }
-
-    @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
-    }
-
-    /* simple mobile fallback nav */
-    .nav-links-mobile {
-      display: none;
-      flex-wrap: wrap;
-      gap: 0.4rem 1rem;
-      padding: 0.4rem 1.5rem 0.6rem;
-      font-size: 0.8rem;
-    }
-
-    .nav-links-mobile a {
-      color: #d1d5db;
-      text-decoration: none;
-    }
-
-    .nav-links-mobile a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 720px) {
-      .nav-links-mobile {
-        display: flex;
-      }
-    }
-
-    /* =========================
-       HERO
-       ========================= */
-    .hero {
-      padding-top: 1.75rem;
-      padding-bottom: 2.5rem;
-    }
-
-    .hero-tagline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.2rem 0.75rem;
-      border-radius: var(--radius-pill);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text-on-dark);
-      font-size: 0.76rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .hero-tagline-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    .hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: center;
-    }
-
-    @media (max-width: 840px) {
-      .hero-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero-heading {
-      color: #f9fafb;
-      margin-top: 0.75rem;
-    }
-
-    .hero-sub {
-      color: #e5e7eb;
-      margin-top: 0.6rem;
-      max-width: 36rem;
-      font-size: 0.97rem;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.3rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid transparent;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: #f97316;
-      color: #111827;
-      border-color: #f97316;
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.05);
-      text-decoration: none;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: #e5e7eb;
-      border-color: rgba(148, 163, 184, 0.7);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.8);
-      text-decoration: none;
-    }
-
-    .hero-stats-card {
-      background: rgba(15, 23, 42, 0.96);
-      border-radius: 18px;
-      padding: 1rem 1.1rem 1.2rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-on-dark);
-      font-size: 0.84rem;
-    }
-
-    .hero-stat-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #9ca3af;
-      margin-bottom: 0.3rem;
-    }
-
-    .hero-stat-main {
-      font-size: 0.9rem;
-      color: #e5e7eb;
-      line-height: 1.5;
-    }
-
-    .hero-stat-pillrow {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-top: 0.6rem;
-    }
-
-    .pill {
-      padding: 0.25rem 0.7rem;
-      border-radius: var(--radius-pill);
-      background: rgba(31, 41, 55, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      font-size: 0.7rem;
-      color: #e5e7eb;
-    }
-
-    /* =========================
-       SPECIAL GRIDS
-       ========================= */
-    .two-column-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .list-block {
-      padding: 1rem 1rem 1.1rem;
-      border-radius: 12px;
-      background: var(--bg-muted);
-    }
-
-    .list-block h3 {
-      margin-bottom: 0.3rem;
-      color: var(--text-main);
-    }
-
-    .list-block ul {
-      margin-left: 1rem;
-    }
-
-    /* =========================
-       FOOTER
-       ========================= */
-    footer {
-      padding: 1.5rem 1.5rem 2.5rem;
-      max-width: 1040px;
-      margin: 0 auto;
-      font-size: 0.8rem;
-      color: #9ca3af;
-    }
-
-    .footer-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .footer-meta a {
-      color: #9ca3af;
-      text-decoration: none;
-    }
-
-    .footer-meta a:hover {
-      text-decoration: underline;
-    }
-
-    /* Accessibility: skip link */
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-
-    .skip-link:focus {
-      left: 0.75rem;
-      top: 0.75rem;
-      width: auto;
-      height: auto;
-      padding: 0.4rem 0.75rem;
-      background: #f97316;
-      color: #111827;
-      border-radius: var(--radius-pill);
-      z-index: 50;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
-<body>
+<body class="theme-soft">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Site Header -->
+  <!-- Header with logo -->
   <div class="site-header-shell">
     <header class="site-header">
       <div class="logo">
-        <span class="logo-main">TASK L3C</span>
-        <span class="logo-sub">Disaster Readiness in Japan</span>
+        <img
+          src="/TASK_Logo_Box_Black_on_White.png"
+          alt="TASK logo"
+          class="logo-mark"
+        />
+        <div class="logo-text">
+          <span class="logo-main">TASK L3C</span>
+          <span class="logo-sub">Disaster Readiness in Japan</span>
+        </div>
       </div>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#why">Why</a>
-        <a href="#programs">Programs</a>
-        <a href="#transparency">Transparency</a>
-        <a href="#founder">Founder</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="/index.html">Home</a>
+        <a href="/programs.html">Programs</a>
+        <a href="/transparency.html">Transparency</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/ja/" aria-label="Japanese version">日本語</a>
+        <a href="/contact.html" class="nav-cta">Talk with TASK</a>
       </nav>
     </header>
     <nav class="nav-links-mobile" aria-label="Primary (compact)">
-      <a href="#about">About</a>
-      <a href="#why">Why</a>
-      <a href="#programs">Programs</a>
-      <a href="#founder">Founder</a>
-      <a href="#contact">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/transparency.html">Transparency</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/ja/">日本語</a>
     </nav>
   </div>
 
   <main id="main-content" class="page-shell">
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-layout">
         <div>
@@ -525,8 +62,8 @@
             TASK L3C connects international supporters with trusted Japanese NGOs and NPOs so that preparedness, capacity, and long-term resilience are strengthened before the next major disaster.
           </p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="#programs">See what TASK L3C does</a>
-            <a class="btn btn-ghost" href="#contact">Talk with TASK L3C</a>
+            <a class="btn btn-primary" href="/programs.html">See what TASK L3C does</a>
+            <a class="btn btn-ghost" href="/contact.html">Talk with TASK L3C</a>
           </div>
         </div>
         <aside class="hero-stats-card" aria-label="TASK L3C focus">
@@ -545,6 +82,7 @@
       </div>
     </section>
 
+    <!-- MAIN CONTENT CARD -->
     <div class="card-surface">
       <!-- ABOUT -->
       <section id="about" class="section">
@@ -585,7 +123,7 @@
         </p>
       </section>
 
-      <!-- PROGRAMS / WHAT WE DO -->
+      <!-- PROGRAMS (high level) -->
       <section id="programs" class="section">
         <header class="section-header">
           <div class="eyebrow">What we do</div>
@@ -629,6 +167,10 @@
             </div>
           </div>
         </div>
+
+        <p>
+          For more detail, see the dedicated <a href="/programs.html">Programs page</a>.
+        </p>
       </section>
 
       <!-- WHO WE SERVE -->
@@ -674,9 +216,9 @@
           are being strengthened.
         </p>
         <p>
-          Future functionality includes donor views by disaster phase, organization
-          type, and region in Japan—so supporters can understand at a glance how
-          readiness is growing over time.
+          A dedicated <a href="/transparency.html">Transparency page</a> will show
+          how support is allocated across phases, regions, and organization types as
+          the work grows.
         </p>
       </section>
 
@@ -739,12 +281,12 @@
         </p>
 
         <div class="hero-ctas" style="margin-top: 1rem;">
-          <a class="btn btn-primary" href="#contact">NGOs/NPOs – Start the conversation</a>
-          <a class="btn btn-ghost" href="#contact">Donors &amp; partners – Contact us</a>
+          <a class="btn btn-primary" href="/contact.html">NGOs/NPOs – Start the conversation</a>
+          <a class="btn btn-ghost" href="/contact.html">Donors &amp; partners – Contact us</a>
         </div>
       </section>
 
-      <!-- CONTACT -->
+      <!-- CONTACT (summary) -->
       <section id="contact" class="section">
         <header class="section-header">
           <div class="eyebrow">Contact</div>
@@ -755,12 +297,8 @@
           <a href="mailto:carl@tokyotaskforce.com">carl@tokyotaskforce.com</a>
         </p>
         <p>
-          This is the primary contact for Japanese NGOs and NPOs, donors, and
-          institutional partners.
-        </p>
-        <p>
-          Future functionality will include a contact form, scheduling link, and
-          dedicated intake paths for NGOs, NPOs, and donors.
+          For a structured intake form, visit the dedicated
+          <a href="/contact.html">Contact page</a>.
         </p>
       </section>
     </div>
@@ -775,442 +313,6 @@
         Site served via GitHub Pages at <strong>taskl3c.com</strong>.
       </span>
     </div>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TASK L3C – Disaster Readiness in Japan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --accent: #000000;
-      --muted: #f4f4f4;
-      --section-border: #e0e0e0;
-      --max-width: 980px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      border-bottom: 1px solid var(--section-border);
-      background: #ffffffee;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(8px);
-    }
-    .nav-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0.5rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    .logo-box {
-      border: 2px solid #000;
-      padding: 0.3rem 0.8rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      font-size: 0.9rem;
-    }
-    .logo-box span {
-      display: inline-block;
-      transform: translateY(0.04em);
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-left: 1rem;
-      opacity: 0.8;
-    }
-    nav a:hover {
-      opacity: 1;
-    }
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-    .hero {
-      padding: 3rem 0 2.5rem;
-      border-bottom: 1px solid var(--section-border);
-    }
-    .hero-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.7rem;
-      opacity: 0.7;
-      margin-bottom: 0.75rem;
-    }
-    .hero-title {
-      font-size: 2.1rem;
-      line-height: 1.15;
-      margin: 0 0 1rem;
-      font-weight: 700;
-    }
-    .hero-subtitle {
-      max-width: 40rem;
-      margin: 0 0 1.6rem;
-      font-size: 0.98rem;
-      opacity: 0.9;
-    }
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .btn {
-      border-radius: 999px;
-      padding: 0.55rem 1.4rem;
-      border: 1px solid #000;
-      background: #000;
-      color: #fff;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .btn.secondary {
-      background: transparent;
-      color: #000;
-    }
-    .btn:hover {
-      filter: brightness(0.93);
-    }
-    .hero-note {
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
-    section {
-      padding: 2.4rem 0;
-      border-bottom: 1px solid var(--section-border);
-    }
-    .section-label {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.72rem;
-      opacity: 0.7;
-      margin-bottom: 0.6rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin: 0 0 0.6rem;
-    }
-    p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-    }
-    .grid-2, .grid-4 {
-      display: grid;
-      gap: 1.25rem;
-      margin-top: 1.2rem;
-    }
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .grid-4 {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    .card {
-      padding: 1rem 1.1rem;
-      border-radius: 0.75rem;
-      background: var(--muted);
-    }
-    .card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1rem;
-    }
-    .tagline {
-      font-style: italic;
-      font-size: 0.9rem;
-      opacity: 0.85;
-      margin-top: 0.6rem;
-    }
-    .meta {
-      font-size: 0.8rem;
-      opacity: 0.75;
-      margin-top: 0.3rem;
-    }
-    .founder {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-      gap: 1.5rem;
-      align-items: start;
-      margin-top: 1.3rem;
-    }
-    .founder-photo {
-      border-radius: 0.9rem;
-      border: 1px dashed #bbb;
-      min-height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: #777;
-      text-align: center;
-      padding: 0.75rem;
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.7rem;
-    }
-    .pill {
-      border-radius: 999px;
-      border: 1px solid #ccc;
-      padding: 0.25rem 0.7rem;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      opacity: 0.8;
-    }
-    .cta-section {
-      text-align: left;
-    }
-    .cta-section .hero-buttons {
-      margin-top: 1.1rem;
-    }
-    footer {
-      padding: 1.5rem;
-      border-top: 1px solid var(--section-border);
-      font-size: 0.8rem;
-      text-align: center;
-      opacity: 0.8;
-    }
-    a.inline {
-      color: #000;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.18em;
-    }
-    @media (max-width: 720px) {
-      .hero {
-        padding-top: 2.2rem;
-      }
-      .hero-title {
-        font-size: 1.6rem;
-      }
-      .nav-inner {
-        padding-inline: 1rem;
-      }
-      main {
-        padding-inline: 1rem;
-      }
-      .founder {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="nav-inner">
-      <div class="logo-box"><span>TASK</span></div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#what-we-do">Programs</a>
-        <a href="#transparency">Transparency</a>
-        <a href="#founder">Founder</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-eyebrow">Public-benefit L3C · Japan-focused</div>
-      <h1 class="hero-title">Building disaster readiness in Japan before another event.</h1>
-      <p class="hero-subtitle">
-        TASK L3C connects international supporters with trusted Japanese NGOs/NPOs so that preparedness,
-        capacity, and long-term resilience are strengthened <em>before</em> the next major disaster.
-      </p>
-      <div class="hero-buttons">
-        <a href="#what-we-do" class="btn">Japanese NGOs/NPOs</a>
-        <a href="#contact" class="btn secondary">Donors &amp; Partners</a>
-      </div>
-      <div class="hero-note">
-        Working mockup – structure and flow of the TASK L3C site. Visual polish will come later inside Google Sites.
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="section-label">Overview</div>
-      <h2>What is TASK L3C?</h2>
-      <p>
-        TASK L3C is a public-benefit organization created to strengthen Japan’s disaster readiness before the next major event
-        by connecting international supporters with frontline Japanese NGOs and NPOs. We help build preparedness, capability,
-        and long-term resilience as it is needed most.
-      </p>
-      <p class="tagline">
-        We are not a rapid-response charity. We are the missing layer that prepares, connects, and supports those who will be there when it matters most.
-      </p>
-    </section>
-
-    <section id="why">
-      <div class="section-label">Context</div>
-      <h2>Why TASK L3C Exists</h2>
-      <p>
-        Japan experiences major disasters with predictable frequency, yet frontline NGOs/NPOs often respond to each event without the
-        pre-disaster funding, mutual support, or international preparation they require. When a crisis strikes, Japan must respond
-        immediately—often without recognized resources or operational support already in place.
-      </p>
-      <p>
-        TASK L3C exists to change this pattern by strengthening our own readiness before the next event and by connecting committed
-        supporters to the organizations closest to communities at risk.
-      </p>
-    </section>
-
-    <section id="what-we-do">
-      <div class="section-label">What we do</div>
-      <h2>Core Functions of TASK L3C</h2>
-      <div class="grid-4">
-        <div class="card">
-          <h3>Pre-disaster funding</h3>
-          <p>
-            TASK L3C strengthens readiness before an event by providing support to Japanese NGOs/NPOs so no one is starting from zero when disasters strike.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Capacity building</h3>
-          <p>
-            We help frontline organizations train, plan, and define roles across the disaster cycle—before, during, and after major events.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Mutual support &amp; bridging</h3>
-          <p>
-            TASK L3C links local Japanese organizations with international supporters, strengthening coordination, communication,
-            and shared understanding across borders.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Long-term resilience</h3>
-          <p>
-            We remain engaged beyond the immediate crisis—supporting communities as they recover, rebuild, and prepare for the future.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="who-we-serve">
-      <div class="section-label">Who we serve</div>
-      <h2>The people TASK L3C is built for</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Japanese NGOs/NPOs</h3>
-          <p>
-            • Join a pre-disaster support network<br>
-            • Strengthen capacity before emergencies<br>
-            • Participate in training, tools, and role-mapping<br>
-            • Build readiness that protects the communities you serve
-          </p>
-        </div>
-        <div class="card">
-          <h3>Donors &amp; Partners</h3>
-          <p>
-            • Support readiness before major events<br>
-            • Engage through clear, reliable communication<br>
-            • Strengthen essential Japanese NGOs/NPOs<br>
-            • Contribute to long-term resilience across Japan
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="transparency">
-      <div class="section-label">Governance</div>
-      <h2>Transparency is a must</h2>
-      <p>
-        TASK L3C is governed by strict accounting practices supported by digital recording and reporting.
-        Supporters can see when funds move, which organizations receive them, and how parts of Japan’s disaster
-        cycle are strengthened.
-      </p>
-      <p class="meta">
-        Future functionality: donor views by disaster phase, organization type, and region in Japan.
-      </p>
-    </section>
-
-    <section id="founder">
-      <div class="section-label">Leadership</div>
-      <h2>About the founder</h2>
-      <div class="founder">
-        <div class="founder-photo">
-          Founder photo placeholder<br>
-          (In Google Sites, this becomes your actual portrait.)
-        </div>
-        <div>
-          <p>
-            Carl H. Williams is a retired U.S. Air Force Master Sergeant and former IBM Disaster Recovery Specialist
-            with decades of experience supporting Japan’s disaster response ecosystem. After self-deploying during
-            the 2011 Tohoku disaster, he helped deliver lifesaving programs across Fukushima, Miyagi, and Iwate,
-            while working alongside local and international NGOs/NPOs to strengthen operations.
-          </p>
-          <p>
-            TASK L3C continues that commitment by building readiness before the next major event and by giving
-            supporters a clear way to stand with Japan’s most at-risk communities.
-          </p>
-          <div class="pill-row">
-            <div class="pill">Disaster readiness</div>
-            <div class="pill">Japan–U.S. ties</div>
-            <div class="pill">NGO/NPO support</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="join">
-      <div class="section-label">Get involved</div>
-      <div class="cta-section">
-        <h2>Join TASK L3C</h2>
-        <p>
-          Whether you are a Japanese NGO/NPO attending to your critical day-to-day operations while preparing for disasters,
-          or an international supporter seeking meaningful impact, TASK L3C welcomes collaboration. Together, we can strengthen readiness.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn">NGOs/NPOs – Start the conversation</a>
-          <a href="#contact" class="btn secondary">Donors &amp; partners – Contact us</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-label">Contact</div>
-      <h2>Contact TASK L3C</h2>
-      <p>
-        Email: <a href="mailto:carl@tokyotaskforce.com" class="inline">carl@tokyotaskforce.com</a><br>
-        Primary contact for Japanese NGOs/NPOs, donors, and institutional partners.
-      </p>
-      <p class="meta">
-        Future functionality: contact form, scheduling link, and dedicated intake paths for NGOs/NPOs and donors.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © TASK L3C — Public-benefit low-profit limited liability company (L3C). This mockup illustrates structure and flow; the live site will be implemented in Google Sites at taskl3c.com.
   </footer>
 </body>
 </html>
