@@ -581,3 +581,50 @@ footer {
   border-radius: var(--radius-pill);
   z-index: 50;
 }
+
+/* Founder insignia block */
+.founder-insignia {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-subtle);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.insignia-item {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.insignia-item img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.insignia-item figcaption {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: 0.04em;
+}
+
+/* Mobile stacking */
+@media (max-width: 720px) {
+  .founder-insignia {
+    grid-template-columns: 1fr;
+  }
+
+  .insignia-item img {
+    max-width: 190px;
+  }
+}
