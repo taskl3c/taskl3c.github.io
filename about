@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <title>Vision – TASK L3C</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="TASK L3C vision: a readiness layer that ensures Japan’s frontline NGOs/NPOs are supported before the next disaster."
-  />
+  <meta name="description" content="The vision behind TASK L3C: building Japan’s readiness layer before disaster strikes." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body class="theme-soft">
@@ -25,8 +22,10 @@
       </div>
       <nav class="nav-links" aria-label="Primary">
         <a href="/index.html">Home</a>
-        <a href="/about.html">Vision</a>
+        <a href="/about.html" aria-current="page">Vision</a>
         <a href="/programs.html">Programs</a>
+        <a href="/cases/">Cases</a>
+        <a href="/partners/">Partners</a>
         <a href="/transparency.html">Transparency</a>
         <a href="/contact.html">Contact</a>
         <a href="/ja/">日本語</a>
@@ -35,8 +34,10 @@
     </header>
     <nav class="nav-links-mobile" aria-label="Primary (compact)">
       <a href="/index.html">Home</a>
-      <a href="/about.html">Vision</a>
+      <a href="/about.html" aria-current="page">Vision</a>
       <a href="/programs.html">Programs</a>
+      <a href="/cases/">Cases</a>
+      <a href="/partners/">Partners</a>
       <a href="/transparency.html">Transparency</a>
       <a href="/contact.html">Contact</a>
       <a href="/ja/">日本語</a>
@@ -48,164 +49,65 @@
     <section class="hero">
       <div class="hero-layout">
         <div>
-          <div class="hero-tagline">
-            <span class="hero-tagline-dot"></span>
-            Vision &amp; Origin
-          </div>
-          <h1 class="hero-heading">
-            Building the readiness layer Japan deserves.
-          </h1>
+          <div class="hero-tagline"><span class="hero-tagline-dot"></span>Vision</div>
+          <h1 class="hero-heading">A readiness layer Japan can rely on.</h1>
           <p class="hero-sub">
-            TASK L3C exists to strengthen preparedness before the next major disaster —
-            so Japan’s frontline NGOs and NPOs can act immediately with support already in place.
+            TASK L3C exists to strengthen disaster readiness in Japan before the next major event —
+            by funding and connecting trusted frontline NGOs and NPOs.
           </p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="/programs.html">See the operating model</a>
-            <a class="btn btn-ghost" href="/contact.html">Talk with TASK</a>
-          </div>
         </div>
-
-        <aside class="hero-stats-card" aria-label="Vision summary">
-          <div class="hero-stat-label">Vision in one sentence</div>
-          <div class="hero-stat-main">
-            When the next disaster hits Japan, readiness should already be funded, mapped, and connected.
-          </div>
-        </aside>
       </div>
     </section>
 
     <div class="card-surface">
-      <!-- SUCCESS -->
       <section class="section">
-        <header class="section-header">
-          <div class="eyebrow">Success looks like</div>
-          <h2>A different starting line</h2>
-        </header>
+        <header class="section-header"><div class="eyebrow">What TASK is</div><h2>Readiness, not response</h2></header>
         <p>
-          TASK L3C is building a future where Japan’s disaster response does not start from zero.
-          Readiness is already active long before an earthquake, tsunami, or other major event.
-        </p>
-        <div class="vision-grid">
-          <div class="vision-tile"><p><strong>Pre‑disaster funding</strong> supports planning, staffing, and priority tools in advance.</p></div>
-          <div class="vision-tile"><p><strong>Mutual‑aid relationships</strong> are defined and practiced before they are needed.</p></div>
-          <div class="vision-tile"><p><strong>International supporters</strong> know who to trust and how to help immediately.</p></div>
-          <div class="vision-tile"><p><strong>Recovery is faster</strong> because readiness was strengthened years earlier.</p></div>
-        </div>
-      </section>
-
-      <!-- ORIGIN -->
-      <section class="section">
-        <header class="section-header">
-          <div class="eyebrow">Origin</div>
-          <h2>What we learned in 2011</h2>
-        </header>
-        <p>
-          During the 2011 Tohoku disaster, Japan’s general public and NGO/NPO community moved first.
-          The response was powerful — but it also revealed a recurring problem: trusted organizations
-          were forced to improvise without pre‑disaster resources and coordination already in place.
-        </p>
-        <p>
-          TASK L3C was created from that lesson. The gap is not Japan’s will or capability during a crisis.
-          The gap is what happens beforehand — the readiness layer that should already connect funding,
-          roles, and support networks.
+          Japan’s disaster response is strong. The weakness is what happens before the ground shakes:
+          stable readiness funding, mapped mutual‑aid roles, and clear international support lanes.
+          TASK L3C builds that missing layer.
         </p>
       </section>
 
-      <!-- WHAT TASK IS -->
       <section class="section">
-        <header class="section-header">
-          <div class="eyebrow">What TASK is</div>
-          <h2>The missing layer</h2>
-        </header>
+        <header class="section-header"><div class="eyebrow">Primary missions</div><h2>Support without distraction</h2></header>
         <p>
-          TASK is not a rapid‑response charity. We strengthen the layer that must exist <em>before</em>
-          a disaster so that response and recovery work can begin immediately with support ready to go.
+          Every organization has its own primary mission. TASK strengthens readiness while protecting that mission,
+          so partners can serve communities every day and still surge safely during disasters.
         </p>
         <p>
-          <strong>Every organization has a primary mission.</strong> TASK L3C supports readiness in ways
-          that protect each partner’s core purpose instead of competing with it.
+          TASK operates under our parent company, <strong>New Wind Therapeutics L3C</strong>, which maintains a separate primary mission.
         </p>
       </section>
 
-      <!-- STRUCTURE -->
-      <section class="section">
-        <header class="section-header">
-          <div class="eyebrow">Structure</div>
-          <h2>How we stay mission‑disciplined</h2>
-        </header>
+      <section class="section founder-band">
+        <header class="section-header"><div class="eyebrow">Founder</div><h2>Carl Harold Williams</h2></header>
         <p>
-          TASK L3C operates as a focused readiness initiative under
-          <strong>New Wind Therapeutics L3C</strong>, our parent company.
-          New Wind maintains its own primary mission, and TASK exists as a dedicated extension —
-          not a replacement — of anyone’s core purpose.
+          TASK builds on decades of embedded emergency management work in Japan, including self‑deployment
+          after 3/11 and long‑term partnerships across Tohoku and Fukushima.
         </p>
-      </section>
-
-      <!-- FOUNDER -->
-      <section id="founder" class="section">
-        <header class="section-header">
-          <div class="eyebrow">Leadership</div>
-          <h2>About the founder</h2>
-        </header>
-
-        <div class="grid-2">
-          <div>
-            <p>
-              <strong>Carl H. Williams</strong> is a retired U.S. Air Force Master Sergeant
-              and former IBM Disaster Recovery Specialist with decades of experience supporting
-              Japan’s disaster response ecosystem.
-            </p>
-            <p>
-              After self‑deploying during the 2011 Tohoku disaster, he helped deliver
-              lifesaving programs across Fukushima, Miyagi, and Iwate while working
-              alongside local and international NGOs and NPOs to strengthen operations.
-            </p>
-            <p>
-              TASK L3C continues that commitment by building readiness before the next
-              major event and by giving global supporters a clear way to stand with Japan’s
-              most at‑risk communities.
-            </p>
+        <div class="founder-insignia-grid">
+          <div class="insignia-card">
+            <img src="/assets/founder/PAFAF_patch.png" alt="PAFAF Patch placeholder" loading="lazy">
+            <p class="insignia-caption">PAFAF Patch</p>
           </div>
-
-          <aside aria-label="Founder service insignia">
-            <div class="founder-insignia">
-              <figure class="insignia-item">
-                <img src="/assets/founder/PAFAF_patch.png" alt="Pacific Air Forces Patch" loading="lazy" />
-                <figcaption>PAFAF Patch</figcaption>
-              </figure>
-
-              <figure class="insignia-item">
-                <img src="/assets/founder/security_police_beret.png" alt="Security Police Beret" loading="lazy" />
-                <figcaption>Security Police Beret</figcaption>
-              </figure>
-
-              <figure class="insignia-item">
-                <img src="/assets/founder/security_police_badge.png" alt="Security Police Function Badge" loading="lazy" />
-                <figcaption>Security Police Function Badge</figcaption>
-              </figure>
-            </div>
-          </aside>
+          <div class="insignia-card">
+            <img src="/assets/founder/security_police_beret.png" alt="Security Police beret placeholder" loading="lazy">
+            <p class="insignia-caption">Security Police Beret</p>
+          </div>
+          <div class="insignia-card">
+            <img src="/assets/founder/security_police_badge.png" alt="Security Police badge placeholder" loading="lazy">
+            <p class="insignia-caption">Security Police Badge</p>
+          </div>
         </div>
       </section>
 
-      <!-- CTA -->
       <section class="section">
-        <header class="section-header">
-          <div class="eyebrow">Join</div>
-          <h2>Build this readiness layer with us</h2>
-        </header>
-        <p>
-          If you are a Japanese NGO/NPO or an international supporter who sees yourself in this vision,
-          we’re ready to talk.
-        </p>
-        <div class="hero-ctas" style="margin-top:1rem;">
-          <a class="btn btn-primary" href="/contact.html">Contact TASK</a>
-          <a class="btn btn-ghost" href="/index.html">Back to Home</a>
-        </div>
+        <a class="btn btn-primary" href="/contact.html">Talk with TASK</a>
+        <a class="btn btn-ghost" href="/cases/">Read case examples</a>
       </section>
     </div>
   </main>
-
 
   <footer>
     <div class="footer-meta">
