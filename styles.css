@@ -628,3 +628,28 @@ footer {
     max-width: 190px;
   }
 }
+
+/* Two-lane card layout (recognition page + home sections) */
+.two-lane {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.lane-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem;
+}
+
+.lane-card h3 {
+  margin-top: 0;
+}
+
+.lane-card ol,
+.lane-card ul {
+  color: var(--text-muted);
+}
